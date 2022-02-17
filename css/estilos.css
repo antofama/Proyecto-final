@@ -221,8 +221,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     margin: 20px 20px; 
 }
 .presentacion img{
-    width: 40%;
-    
+    width: 40%;   
 }
 .parrafo p{
     font-size: 30px;
