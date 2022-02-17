@@ -19,62 +19,34 @@ body{
 
 /* Inicio header*/
 
-.header{
+.container-fluid{
     width: 100%;
-    background-color: black;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
+    background-color: rgb(163, 163, 163);
 }
+.navbar-collapse{
+    display: flex;
+    justify-content: space-around;
 
-.nav-links{
-    width: 50%;
-    margin: 0 auto;
-    
-    
 }
-.ul-nav{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;
-    margin-right: 15px;
+.navbar-nav{
+    background-color: rgb(163, 163, 163);
 }
-.ul-nav li a{
-    text-decoration: none;
-    color: whitesmoke;
+.nav-link{
+    color: whitesmoke !important;
+    font-size: large;
     
 }
-.ul-nav li a:hover{
+.nav-link:hover{
     border-bottom: 2px solid #fff;
     transition: 5s;
 }
-.logo{
-    width: 50%;
+.navbar-brand img{
+    width: 30%;
     margin: 5px;
     border-radius: 50%;
 }
-#nav-toggle{
-    position: absolute;
-    top: -100px;
-}
-nav .icon-burger{
-    display: none;
-    position: absolute;
-    right:5%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-nav .icon-burger .line{
-    width: 30px;
-    height: 5px;
-    background-color: #fff;
-    margin: 5px;
-    border-radius: 3px;
-    transition: all .3s ease-in-out;
 
-}
 /*Fin header*/
 
 /*Incio Seccion Uno*/
@@ -159,21 +131,53 @@ nav .icon-burger .line{
 /* Fin seccion servicios*/
 
 /*Inicio galeria de imagenes*/
-.galeria-imagenes h3{
-    color: #fff;
-    font-size: 40px;
-}
-.galeria-imagenes img{
-    width: 100%;
-}
-.galeria-imagenes{
-    margin: 15px 15px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-gap: 30px;
+.galeria{
+    color: var(--text-color);
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px auto;
+    margin: 15px auto;
 }
 /* Fin Galeria de imagenes*/
+
+/* Inicio seccion Contacto*/
+.container{
+    background-color: black;
+    color: white;
+}
+.row h1{
+    font-weight: 600;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+}
+.row h4{
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+/*Inputs*/
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+/* Fin seccion contacto*/
+
 /* inicio Footer*/
 .footer{
     width: 100%;
@@ -196,6 +200,7 @@ nav .icon-burger .line{
     padding: 18px 0;
 }
 /*Fin footer*/
+
 /*Inicio nosotros*/
 .nosotros{
     margin: 10px 10px;
@@ -229,41 +234,6 @@ nav .icon-burger .line{
     body{
         background-color: darkgrey;
     }
-    .ul-nav{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        left: 0;
-        right: 0;
-        top: 100px;
-        bottom: 100%;
-        width: auto;
-        height: auto;
-        background-color: rgb(150, 148, 148);
-        overflow: hidden;
-        transition: all 5s ease-in-out;
-    }
-    
-    .ul-nav li a{
-        font-size: 20px;
-        color: #fff;
-    }
-    nav :checked ~ .ul-nav{
-		bottom: 0;
-	}
-    nav .icon-burger{
-        display: block;
-    }   
-    nav :checked ~ .icon-burger .line:nth-child(1) {
-		transform: translateY(10px) rotate(225deg);
-	}
-    nav :checked ~ .icon-burger .line:nth-child(3) {
-		transform: translateY(-10px) rotate(-225deg);
-	}
-	nav :checked ~ .icon-burger .line:nth-child(2) {
-		opacity: 0;
-	}
     .container-service{
         grid-template-columns:repeat(1,1fr);
         flex-direction: column;
@@ -286,4 +256,46 @@ nav .icon-burger .line{
     .sec-uno h1{
         font-size: 30px;
     }
+    .carousel-item img{
+        width: 100%;
+    }
+
+    .galeria{
+        font-size: 30px;
+    }
+    }
+    /* Tablet*/
+    @media screen and (min-width:480px) and (max-width:900px) {
+        body{
+            background-color: darkgrey;
+        }
+
+        .container-service{
+            grid-template-columns:repeat(1,1fr);
+            flex-direction: column;
+            grid-gap: 10px;
+        }
+        .box-service ul li{
+            font-size: 10px;
+        }
+        .container-service h3{
+            font-size: 10px;
+        }
+        .img-servicios{
+            width: 15%;
+        }
+    
+        .galeria-imagenes{
+            grid-template-columns: repeat(1,1fr);
+            flex-direction: column;
+        }
+        .sec-uno h1{
+            font-size: 30px;
+        }
+        .carousel-item img{
+            width: 100%;
+        }
+        .galeria{
+            font-size: 30px;
+        }
     }

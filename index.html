@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="css/estilos.css">
 
@@ -19,34 +20,35 @@
 </head>
 <body>
     <!--Inicio Header-->
-    <header class="header">
-        <a href="index.html"> <img src="multimedia/Logo1.png" alt="Logo del sitio" class="logo"></a>
-        <nav class="nav-links">
-            <input id="nav-toggle" type="checkbox">
-            <ul class="ul-nav">
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="pages/nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="#servicios">Servicios</a>
-                </li>
-                <li>
-                   <a href="pages/trabajos.html">Trabajos</a> 
-                </li>
-                <li>
-                    <a href="pages/contacto.html">Contacto</a>
-                </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+              <img src="multimedia/Logo1.png" alt="Logo de mi sitio">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servicios">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/trabajos.html">Trabajos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+              </li>
             </ul>
-            <label for="nav-toggle" class="icon-burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </label>
-        </nav>
-    </header>
+          </div>
+        </div>
+      </nav>
      <!--Fin Header-->
      
      <!-- Inicio seccion uno-->
@@ -128,18 +130,35 @@
     <!--Fin seccion servicios-->
 
     <!--Galeria imagenes-->
-    <section class="galeria-imagenes">
-        <h3>
-            Galeria de imagenes
-        </h3>
-        <img src="multimedia/galeria1.jpg" alt="galeria de imagenes">
-        <img src="multimedia/galeria2.jpg" alt="galeria de imagenes">
-        <img src="multimedia/Galeria3.jpeg" alt="galeria de imagenes">
-        <img src="multimedia/galeria4.jpeg" alt="galeria de imagenes">
-        <img src="multimedia/Galeria5.jpeg" alt="galeria de imagenes">
-        <img src="multimedia/Galeria6.jpg" alt="galeria de imagenes">
-        <img src="multimedia/Galeria7.jpeg" alt="galeria de imagenes">
-    </section>
+
+    <h3 class="galeria">Galeria de Imagenes</h3>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="multimedia/galeria1.jpg" class="d-block w-80" alt="foto de autos">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/galeria2.jpg" class="d-block w-80" alt="foto de autos">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/Galeria3.jpeg" class="d-block w-80" alt="foto de autos">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/Galeria6.jpg" class="d-block w-80" alt="foto de autos">
+          </div>
+          <div class="carousel-item">
+            <img src="multimedia/Galeria7.jpeg" class="d-block w-80" alt="foto de autos">
+          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     <!--Fin galeria de imagenes-->
 
     <!--Inicio footer-->
@@ -153,5 +172,7 @@
       </a>
   </footer> 
   <!--Fin footer-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
