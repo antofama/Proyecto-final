@@ -6,6 +6,7 @@
 :root{
     --text-color:#fff;
     --text-sercice:rgb(141, 143, 146);
+    --size-titulos: 60px
 }
 /* Font
 font-family: 'Contrail One', cursive;*/
@@ -18,24 +19,9 @@ body{
 }
 
 /* Inicio header*/
-
-.container-fluid{
-    width: 100%;
-    display: flex;
-    background-color: rgb(163, 163, 163);
-}
 .navbar-collapse{
     display: flex;
     justify-content: space-around;
-
-}
-.navbar-nav{
-    background-color: rgb(163, 163, 163);
-}
-.nav-link{
-    color: whitesmoke !important;
-    font-size: large;
-    
 }
 .nav-link:hover{
     border-bottom: 2px solid #fff;
@@ -65,7 +51,7 @@ body{
 .sec-uno h1{
     color: var(--text-color);
     text-align: center;
-    font-size: 60px;
+    font-size: var(--size-titulos);
     transition: all 2s;
 }
 .sec-uno h1:hover{
@@ -85,9 +71,10 @@ body{
     margin-bottom: 10px;
     color: var(--text-color);
     text-align: center;
-    font-size: 36px;
-    text-decoration: underline;
-   
+    text-decoration: underline;   
+}
+.titulo-servicio h2{
+    font-size: var(--size-titulos);
 }
  .img-servicios{
      width: 30%;
@@ -118,11 +105,8 @@ body{
     flex-direction: column;
     border-radius: 10px;
     box-sizing: border-box;
-    background-color: #d8d8d8;
-    
+    background-color: #d8d8d8;   
 } 
-
-
 .box-service ul li{
     list-style-type: circle;
     color: var(--text-sercice);
@@ -133,7 +117,8 @@ body{
 /*Inicio galeria de imagenes*/
 .galeria{
     color: var(--text-color);
-    font-size: 60px;
+    font-size: var(--size-titulos);
+    text-decoration: underline;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,6 +213,21 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     color: var(--text-color);
     margin-left: 15px;
 }
+.banner h2{
+    color: darkslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-titulos);
+    text-decoration: underline;
+    text-transform: uppercase;
+}  
+
+/*Animation*/
+
+
+
+
 /*Mobile*/
 @media screen and (max-width: 480px){
     body{
@@ -239,10 +239,10 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
         grid-gap: 10px;
     }
     .box-service ul li{
-        font-size: 10px;
+        font-size: 15px;
     }
     .container-service h3{
-        font-size: 10px;
+        font-size: 20px;
     }
     .img-servicios{
         width: 15%;
@@ -275,10 +275,10 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
             grid-gap: 10px;
         }
         .box-service ul li{
-            font-size: 10px;
+            font-size: 15px;
         }
         .container-service h3{
-            font-size: 10px;
+            font-size: 20px;
         }
         .img-servicios{
             width: 15%;
