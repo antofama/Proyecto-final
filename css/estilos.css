@@ -278,7 +278,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 /* fin seccion banner*/
 /*Fin nosotros*/
 /*Inicio seccion trabajos*/
-.trabajos >.container{
+.container-trabajos{
     background-color: #f2f2f2;
 }
 .titulo-trabajos{
@@ -287,33 +287,15 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     text-decoration: underline;
     text-align: center;
 }
-.galeria-trabajos{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
 .imagen-trabajos{
-    width: 24%;
+    width: 100%;
     height: 200px;
     margin-bottom: 10px;
-    overflow: hidden;
     position: relative;
-    cursor: pointer;
     box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
 }
-.imagen-trabajos img{
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.imagen-trabajos img:hover{
-    width: 50%;
-    transition: width 4s;
-    transition-timing-function: ease-in-out; 
-    
-}
 
-
+/* Fin seccion trabajos*/
 /*Mobile*/
 @media screen and (max-width: 480px){
     body{
