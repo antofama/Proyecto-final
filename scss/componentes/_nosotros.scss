@@ -1,0 +1,30 @@
+@import "../base/variables";
+
+.nosotros{
+    margin: 10px 10px;
+    .titulo-nosotros{
+      margin: 5px 5px;
+        padding: 5px 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        h1{
+            font-size: $size-titulos;
+            color: $text-color;
+            text-decoration: underline;
+            .presentacion{
+                img{
+                    width: 100%;
+                    .parrafo{
+                        font-size: 30px;
+                        color: $text-color;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+

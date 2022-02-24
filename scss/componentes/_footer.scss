@@ -1,0 +1,24 @@
+@import "../base/variables";
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30 px 0;
+    background-color: var(--text-sercice);
+    h4{
+        color:$text-color;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        font-weight: 600px;
+        font-size: 20px;    
+        a{
+            img{
+                width: 5%;
+                margin: 0 13px;
+                cursor: pointer;
+                padding: 18px 0;
+            
+
+            }
+        }
+    }
+}
