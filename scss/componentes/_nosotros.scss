@@ -1,30 +1,81 @@
 @import "../base/variables";
+@import "../base/mixins";
 
-.nosotros{
+.nosotros {
     margin: 10px 10px;
     .titulo-nosotros{
-      margin: 5px 5px;
+        margin: 5px 5px;
         padding: 5px 5px;
         display: flex;
         justify-content: center;
         text-align: center;
-
         h1{
-            font-size: $size-titulos;
-            color: $text-color;
-            text-decoration: underline;
-            .presentacion{
-                img{
-                    width: 100%;
-                    .parrafo{
-                        font-size: 30px;
-                        color: $text-color;
-                        margin-left: 15px;
-                    }
-                }
-            }
+        font-size: 50px;
+        color:$text-color;
+        text-decoration: underline;
         }
-
     }
+    .presentacion{
+        img{
+            width: 100%;
+        }
+        .parrafo{
+            @include varios(#fff, 30px, 15px);
+        }
+    }
+}
+
+.banner-marcas {
+	h2 {
+		color:$text-color;
+		font-size:$size-titulos;
+		text-decoration: underline;
+		@extend %display;
+	}
+}
+.slider-track {
+	background-color: #fff;
+	@extend %display;
+}
+.slider {
+	background-color: #fff;
+	width: 960px;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	margin: auto;
+	box-shadow: 0 10 px 20 px -5px rgba(0,0, 0, 0.5);
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		background: linear-gradient(to right, white 0%, rgba(255,255,255,0)100%);
+		z-index: 2;
+		top: 0;
+		left: 0;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		background: linear-gradient(to right, white 0%, rgba(255,255,255,0)100%);
+		z-index: 2;
+		top: 0;
+		right: 0;
+		transform: rotateZ(100deg);
+	}
+	.slider-track {
+		display: flex;
+		width: calc(250px * 14);
+		animation: scroll 40s infinite linear;
+	}
+	.slide {
+		img {
+			width: 250px;
+			height: 100px;
+		}
+	}
 }
 

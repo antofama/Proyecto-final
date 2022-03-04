@@ -1,0 +1,22 @@
+@import "../base/variables"
+
+.container-trabajos{
+    background-color: #f2f2f2;
+    .row{
+        .titulo-trabajos{
+            color: orange;
+            font-size: $size-titulos;
+            text-decoration: underline;
+            text-align: center;
+
+            .col-lg-4 col-md-12 col-sm-12{
+                .imagen-trabajos{
+                    color: orange;
+                    font-size: var(--size-titulos);
+                    text-decoration: underline;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

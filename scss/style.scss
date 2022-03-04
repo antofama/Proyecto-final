@@ -1,4 +1,16 @@
-@import "../scss/componentes/header";
-@import "../scss/componentes/nosotros";
-@import "../scss/componentes/index";
-@import "../scss/componentes/footer";
+@import "./componentes/header";
+@import "./componentes/nosotros";
+@import "./componentes/index";
+@import "./componentes/footer";
+@import "./base/variables";
+@import "./base/extends";
+@import "./base/mixins";
+@import "./base/maps";
+
+body{
+    font-family: 'Contrail One', cursive;
+    background-image: url(../multimedia/Fondo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

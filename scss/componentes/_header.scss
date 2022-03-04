@@ -5,7 +5,7 @@ header{
     nav{
         div{
             display: flex;
-                            justify-content: space-around;
+            justify-content: space-around;
             a{
                 .logo{
                     width: 30%;
@@ -14,13 +14,16 @@ header{
                     .nav-bar{
                         ul{
                             .item{
-                                color:white;
-                                &:hover{
-                                    border-bottom: 2px solid #fff;
-                                    transition: 5s
-                                }
-                         
+                                 
+                                .links{
+                                    color:#fff;
+                                    &:hover{
+                                        border-bottom: 2px solid #fff;
+                                        transition: 5s;                                    
+                                    }
 
+                                }
+                                
                             }
                         }
                     }
