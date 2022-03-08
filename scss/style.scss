@@ -7,6 +7,10 @@
 @import "./base/mixins";
 @import "./base/maps";
 
+*{
+    padding: 0;
+    margin:0;
+}
 body{
     font-family: 'Contrail One', cursive;
     background-image: url(../multimedia/Fondo.jpeg);
