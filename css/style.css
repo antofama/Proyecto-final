@@ -1,3 +1,6 @@
+header {
+  width: 100%;
+}
 header nav div {
   display: flex;
   justify-content: space-around;
@@ -128,6 +131,18 @@ header nav div a .logo .nav-bar ul .item .links:hover {
     font-size: 30px;
   }
 }
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  .galeria .galeria-imagenes {
+    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+  }
+  .galeria .carousel-item img {
+    width: 100%;
+  }
+  .galeria .galeria {
+    font-size: 30px;
+  }
+}
 
 #servicios {
   padding: 20px 0;
@@ -135,6 +150,22 @@ header nav div a .logo .nav-bar ul .item .links:hover {
   margin: 30px 0;
 }
 @media screen and (max-width: 480px) {
+  #servicios .container-service {
+    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+  #servicios .container-service h3 {
+    font-size: 20px;
+  }
+  #servicios .box-service ul li {
+    font-size: 15px;
+  }
+  #servicios .img-servicios {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 900px) {
   #servicios .container-service {
     grid-template-columns: repeat(1, 1fr);
     flex-direction: column;
@@ -196,30 +227,188 @@ header nav div a .logo .nav-bar ul .item .links:hover {
   font-size: 20px;
 }
 
-.footer {
+footer {
+  bottom: 0px;
   width: 100%;
-  text-align: center;
-  padding: 30 px 0;
-  background-color: var(--text-sercice);
-}
-.footer h4 {
-  color: #FFF;
-  margin-bottom: 25px;
-  margin-top: 20px;
-  font-weight: 600px;
-  font-size: 20px;
-}
-.footer h4 a img {
-  width: 5%;
-  margin: 0 13px;
-  cursor: pointer;
-  padding: 18px 0;
+  background: black;
 }
 
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.box p {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: #fcc050;
+  top: -10px;
+}
+
+.left .content p {
+  text-align: justify;
+}
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: orange;
+}
+
+.center .content .fas {
+  font-size: 16px;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover {
+  background: orange;
+}
+.center .content .text {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 16px;
+  margin-bottom: 2px;
+  color: #c0bfbf;
+}
+.right form .msg {
+  margin-top: 10px;
+}
+.right form input {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  height: 35px;
+}
+.right form input:focus {
+  outline-color: #3498db;
+}
+.right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: orange;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right form .btn button:hover {
+  background: #000;
+}
+
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span {
+  color: #656565;
+}
+.bottom center a {
+  color: orange;
+  text-decoration: none;
+}
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  outline: none;
+  outline: none;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
 .banner-marcas h2, .slider-track, .sec-uno, .galeria, .box-service {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -228,6 +417,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

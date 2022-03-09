@@ -43,8 +43,23 @@
         .galeria {
             font-size: 30px;
         }
-    }
+	}
+	@media screen and (min-width:480px) and (max-width:900px){
+		.galeria-imagenes {
+            grid-template-columns: repeat(1,1fr);
+            flex-direction: column;
+        }
+        .carousel-item {
+            img {
+                width: 100%;
+            }
+        }
+        .galeria {
+            font-size: 30px;
+        }
+	}
 }
+
 
 #servicios {
 	padding: 20px 0;
@@ -70,6 +85,26 @@
             width: 15%;
         }
     }
+	@media screen and (min-width:480px) and (max-width:900px){
+		.container-service {
+			grid-template-columns: repeat(1,1fr);
+			flex-direction: column;
+			grid-gap: 10px;
+			h3 {
+				font-size: 20px;
+			}
+		}
+		.box-service {
+			ul {
+				li {
+					font-size: 15px;
+				}
+			}
+		}
+		.img-servicios {
+			width: 15%;
+		}
+	}
 }
 .titulo-servicio {
 	margin-bottom: 10px;
