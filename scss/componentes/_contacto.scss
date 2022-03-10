@@ -1,153 +1,100 @@
-
 .contacto{
-        background-color: #444442;
-        padding-top: 85px;
-    
-        h1 {
-            font-weight: 600;
-            font-size: 72px;
-            color: white;
-            text-align: center;
-        }
-        h4 {
-            font-weight: 400;
-            font-size: 20px;
-            color: #9b9b9b;
-            line-height: 1.5;
-        }   
-}
-input {
-	&:focus {
-		~ {
-			label {
-				font-size: 0.75em;
-				color: #999;
-				top: -5px;
-				-webkit-transition: all 0.225s ease;
-				transition: all 0.225s ease;
-			}
-			span {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: azure;
+
+	.contact-container{
+		max-width: 95%;
+		margin: auto;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 24px;
+		background-color: #363653;
+		box-shadow: 0 0 16px hsla(0, 0, 0, 0.6);
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	.form-container{
+		padding: 20px;
+
+		h1{
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 16px;
+		}
+		.contact-form{
+			display: grid;
+			row-gap: 16px;
+			.input{
 				width: 100%;
-				-webkit-transition: all 0.075s ease;
-				transition: all 0.075s ease;
+				border: none;
+				outline: none;
+				background-color:#4f5057;
+				font-size: 15px;
+				color: azure;
+				border-radius: 7px;
 			}
-		}
-		outline: 0;
-	}
-	&:valid {
-		~ {
-			label {
-				font-size: 0.75em;
-				color: #999;
-				top: -5px;
-				-webkit-transition: all 0.225s ease;
-				transition: all 0.225s ease;
-			}
-		}
-	}
-	padding: 30px;
-	border: 0;
-	width: 100%;
-	font-size: 1rem;
-	background-color: #2d2d2d;
-	color: white;
-	border-radius: 4px;
-}
-textarea {
-	&:focus {
-		~ {
-			label {
-				font-size: 0.75em;
-				color: #999;
-				top: -5px;
-				-webkit-transition: all 0.225s ease;
-				transition: all 0.225s ease;
-			}
-			span {
+			textarea{
 				width: 100%;
-				-webkit-transition: all 0.075s ease;
-				transition: all 0.075s ease;
+				border: none;
+				outline: none;
+				font-size: 15px;
+				background-color:#4f5057;
+				color: azure;
+				border-radius: 7px;
+				resize: none;
+				height: 200px;
+
 			}
-		}
-		outline: 0;
-	}
-	&:valid {
-		~ {
-			label {
-				font-size: 0.75em;
-				color: #999;
-				top: -5px;
-				-webkit-transition: all 0.225s ease;
-				transition: all 0.225s ease;
+			.send-button{
+				background-color: orange;
+				font-size: 16px;
+				font-weight: 500;
+				text-transform: uppercase;
+				border: none;
+				outline: none;
+				cursor: pointer;
+
+				&:hover{
+					background: rgba(243, 161, 7, 0.986);
+					transition: all 3s linear;
+				}
 			}
+
 		}
 	}
-	padding: 30px;
-	border: 0;
-	width: 100%;
-	font-size: 1rem;
-	background-color: #2d2d2d;
-	color: white;
-	border-radius: 4px;
-	width: 100%;
-	min-height: 15em;
-}
-.styled-input {
-	float: left;
-	width: 293px;
-	margin: 1rem 0;
-	position: relative;
-	border-radius: 4px;
-	label {
-		color: #999;
-		padding: 1.3rem 30px 1rem 30px;
-		position: absolute;
-		top: 10px;
-		left: 0;
-		-webkit-transition: all 0.25s ease;
-		transition: all 0.25s ease;
-		pointer-events: none;
-	}
-}
-.styled-input.wide {
-	width: 650px;
-	max-width: 100%;
-}
-.input-container {
-	width: 650px;
-	max-width: 100%;
-	margin: 20px auto 25px auto;
-}
-.submit-btn {
-	float:none;
-	padding: 7px 35px;
-	border-radius: 60px;
-	display: inline-block;
-	background-color: #4b8cfb;
-	color: white;
-	font-size: 18px;
-	cursor: pointer;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06), 0 2px 10px 0 rgba(0,0,0,0.07);
-	-webkit-transition: all 300ms ease;
-	transition: all 300ms ease;
-	&:hover {
-		transform: translateY(1px);
-		box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10), 0 1px 1px 0 rgba(0,0,0,0.09);
-	}
-}
-input[type=checkbox] {
-	+ {
-		label {
-			color: #ccc;
-			font-style: italic;
+	.map{
+		iframe{
+			width:100%;
+			height: 100%;
 		}
 	}
-	&:checked {
-		+ {
-			label {
-				color: #f00;
-				font-style: normal;
+	@media screen and (max-width: 480px){
+		.contact-container{
+			grid-template-columns:1fr;
+			grid-gap:16px;
+			margin-top: 30px;
+		}
+		.map{
+			iframe{
+				height: 400px;
 			}
 		}
 	}
+	@media screen and (min-width:480px) and (max-width:900px){
+		.contact-container{
+			grid-template-columns:1fr;
+			grid-gap:16px;
+			margin-top: 30px;
+		}
+		.map{
+			iframe{
+				height: 400px;
+			}
+		}
+
+	} 
 }

@@ -1,21 +1,32 @@
-@import "../base/variables"
+@import "../base/variables";
 
-.container-trabajos{
-    background-color: #f2f2f2;
-    .row{
-        .titulo-trabajos{
-            color: orange;
-            font-size: $size-titulos;
-            text-decoration: underline;
-            text-align: center;
+.trabajos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
 
-            .col-lg-4 col-md-12 col-sm-12{
-                .imagen-trabajos{
-                    color: orange;
-                    font-size: var(--size-titulos);
-                    text-decoration: underline;
-                    text-align: center;
-                }
+    h1{
+        font-size: 64px;
+        margin: 16px 0;
+        color: #fff;
+        text-decoration: underline;
+    }
+    .image-container{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .image{
+            height: 200px;
+            width:300px;
+            margin: 32px;
+            position: relative;
+
+            img{
+                height: 100%;
+                width: 100%;
             }
         }
     }
