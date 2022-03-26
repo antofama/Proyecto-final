@@ -16,7 +16,7 @@ footer {
 	 p{
 		font-size: 16px;
 		font-weight: 600;
-		text-transform: uppercase;
+		color: $text-color;
 	}
 	.content {
 		margin: 20px 0 0 0;
@@ -43,6 +43,7 @@ footer {
 	.content {
 		p {
 			text-align: justify;
+			color: $text-color;
 		}
 		.social {
 			margin: 20px 0 0 0;
@@ -85,6 +86,7 @@ footer {
 			font-size: 16px;
 			font-weight: 500;
 			padding-left: 10px;
+			color: $text-color;
 		}
 		.phone {
 			margin: 15px 0;
@@ -96,7 +98,7 @@ footer {
 		.text {
 			font-size: 16px;
 			margin-bottom: 2px;
-			color: #c0bfbf;
+			color: $text-color;
 		}
 		.msg {
 			margin-top: 10px;

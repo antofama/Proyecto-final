@@ -1,36 +1,5 @@
-
-
-header{
-    width: 100%;
-    nav{
-        div{
-            display: flex;
-            justify-content: space-around;
-            a{
-                .logo{
-                    width: 30%;
-                    margin: 5px;
-                    border-radius: 50%;
-                    .nav-bar{
-                        ul{
-                            .item{
-                                 
-                                .links{
-                                    color:#fff;
-                                    &:hover{
-                                        border-bottom: 2px solid #fff;
-                                        transition: 5s;                                    
-                                    }
-
-                                }
-                                
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-    }
+.bg-nav{
+    background-color: transparent !important;
+    background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.5)) !important;
 }
 
