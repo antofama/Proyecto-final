@@ -1,32 +1,26 @@
 @import "../base/variables";
 
 .trabajos{
-    width: 100%;
-    height: auto;
-    display: grid;
-    place-items: center;
+    background-color: #222;
+    padding: 80px 0;
 
     h1{
-        font-size: 64px;
-        margin: 16px 0;
-        color: #fff;
-        text-decoration: underline;
+        color: orange;
+        font-size: $size-titulos;
+        text-align: center;
+        text-transform: capitalize;
     }
-    .image-container{
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
 
-        .image{
-            height: 200px;
-            width:300px;
-            margin: 32px;
-            position: relative;
-
-            img{
-                height: 100%;
-                width: 100%;
+    .container-lg{
+        .row{
+            .col{
+                img{
+                    max-width: 100%;
+                    background-color: #ffffff;
+                    padding: 15px;
+                    width: 100%;
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                }
             }
         }
     }

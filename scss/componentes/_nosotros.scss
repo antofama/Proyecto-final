@@ -1,26 +1,42 @@
 @import "../base/variables";
-@import "../base/mixins";
 
-.nosotros {
-    margin: 10px 10px;
-    .titulo-nosotros{
-        margin: 5px 5px;
-        padding: 5px 5px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        h1{
-        font-size: 50px;
-        color:$text-color;
-        text-decoration: underline;
-        }
-    }
-    .presentacion{
+.nosotros{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    background-color: #222;
+
+    .image{
+        flex: 1 1 40rem;
+
         img{
             width: 100%;
         }
-        .parrafo{
-            @include varios(#fff, 30px, 15px);
+    }
+    .content{
+        flex: 1 1 40rem;
+
+        h1{
+            font-size: 5rem;
+            color: orange;
+        }
+        p{
+            font-size: 1.6rem;
+            color: white;
+            padding: 1rem 0;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        .content{
+            h1{
+                font-size: 4rem;
+            }
         }
     }
 }
+
+

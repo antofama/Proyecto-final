@@ -4,35 +4,47 @@
 }
 
 .nosotros {
-  margin: 10px 10px;
-}
-.nosotros .titulo-nosotros {
-  margin: 5px 5px;
-  padding: 5px 5px;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  background-color: #222;
 }
-.nosotros .titulo-nosotros h1 {
-  font-size: 50px;
-  color: #FFF;
-  text-decoration: underline;
+.nosotros .image {
+  flex: 1 1 40rem;
 }
-.nosotros .presentacion img {
+.nosotros .image img {
   width: 100%;
 }
-.nosotros .presentacion .parrafo {
-  color: #fff;
-  font-size: 30px;
-  margin-left: 15px;
+.nosotros .content {
+  flex: 1 1 40rem;
+}
+.nosotros .content h1 {
+  font-size: 5rem;
+  color: orange;
+}
+.nosotros .content p {
+  font-size: 1.6rem;
+  color: white;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 480px) {
+  .nosotros .content h1 {
+    font-size: 4rem;
+  }
 }
 
 .contacto {
   width: 100%;
+  height: 100vh;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: azure;
+  background-color: #222;
 }
 .contacto .contact-container {
   max-width: 95%;
@@ -354,32 +366,21 @@ textarea {
   }
 }
 .trabajos {
-  width: 100%;
-  height: auto;
-  display: grid;
-  place-items: center;
+  background-color: #222;
+  padding: 80px 0;
 }
 .trabajos h1 {
-  font-size: 64px;
-  margin: 16px 0;
-  color: #fff;
-  text-decoration: underline;
+  color: orange;
+  font-size: 60px;
+  text-align: center;
+  text-transform: capitalize;
 }
-.trabajos .image-container {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.trabajos .image-container .image {
-  height: 200px;
-  width: 300px;
-  margin: 32px;
-  position: relative;
-}
-.trabajos .image-container .image img {
-  height: 100%;
+.trabajos .container-lg .row .col img {
+  max-width: 100%;
+  background-color: #ffffff;
+  padding: 15px;
   width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 * {
